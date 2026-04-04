@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Russo+One&display=swap" rel="stylesheet" />
 
   <style>
     /* ============================================================
@@ -115,21 +115,21 @@
     ============================================================ */
     .hero-section {
       position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 320px;
-    background: url(./main.JPG) center 30% / cover no-repeat;
-    margin-bottom: -154px;
-    background-position-x: 60%;
-    background-position-y: -48px;
-    zoom: 0.75;
+      z-index: 2;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto -130px;
+      height: 300px;
+      background: url(./main.JPG) 60% 20% / cover no-repeat;
+      border-radius: 0 0 16px 16px;
     }
     .hero-section::after {
       content: '';
       position: absolute;
-      bottom: 48px; left: 0; right: 0;
-      height: 90%;
+      bottom: 0; left: 0; right: 0;
+      height: 65%;
       background: linear-gradient(to bottom, transparent, var(--cream));
+      border-radius: 0 0 16px 16px;
     }
 
     /* ============================================================
@@ -149,10 +149,10 @@
       background: var(--cream-dark);
       border: 1px solid var(--border-s);
     }
-    .city-info { display: flex; flex-direction: column; gap: 2px; }
-    .city-date-label { font-size: 11px; color: var(--text-muted); font-weight: 600; letter-spacing: 0.04em; }
-    .city-name-label { font-size: 15px; font-weight: 800; color: var(--text-dark); }
-    .city-cap-label { font-size: 12px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+    .city-info { display: flex; flex-direction: column; gap: 3px; }
+    .city-date-label { font-size: 13px; color: var(--text-muted); font-weight: 600; letter-spacing: 0.04em; }
+    .city-name-label { font-size: 18px; font-weight: 800; color: var(--text-dark); }
+    .city-cap-label { font-size: 14px; font-weight: 700; color: var(--gold); white-space: nowrap; }
 
     /* ============================================================
        АВАТАР
@@ -198,12 +198,13 @@
        ЗАГОЛОВКИ
     ============================================================ */
     .title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(26px, 7vw, 35px);
-      font-weight: 900;
+      font-family: 'Russo One', sans-serif;
+      font-size: clamp(28px, 7.5vw, 38px);
+      font-weight: 400;
       text-align: center;
       line-height: 1.1;
       color: var(--burgundy);
+      letter-spacing: 0.02em;
       margin-bottom: 8px;
     }
 
@@ -559,42 +560,42 @@
         <div class="city-row">
           <span class="city-info">
             <span class="city-date-label">24 апреля</span>
-            <span class="city-name-label">Пермь</span>
+            <span class="city-name-label">🏔️ Пермь</span>
           </span>
           <span class="city-cap-label">800 чел.</span>
         </div>
         <div class="city-row">
           <span class="city-info">
             <span class="city-date-label">30 апреля</span>
-            <span class="city-name-label">Уфа</span>
+            <span class="city-name-label">🌙 Уфа</span>
           </span>
           <span class="city-cap-label">1500 чел.</span>
         </div>
         <div class="city-row">
           <span class="city-info">
             <span class="city-date-label">15 мая</span>
-            <span class="city-name-label">Санкт-Петербург</span>
+            <span class="city-name-label">🌊 Санкт-Петербург</span>
           </span>
           <span class="city-cap-label">1700 чел.</span>
         </div>
         <div class="city-row">
           <span class="city-info">
             <span class="city-date-label">16 мая</span>
-            <span class="city-name-label">Москва</span>
+            <span class="city-name-label">🔥 Москва</span>
           </span>
           <span class="city-cap-label">850 чел.</span>
         </div>
         <div class="city-row">
           <span class="city-info">
             <span class="city-date-label">23 мая</span>
-            <span class="city-name-label">Самара</span>
+            <span class="city-name-label">☀️ Самара</span>
           </span>
           <span class="city-cap-label">700 чел.</span>
         </div>
         <div class="city-row">
           <span class="city-info">
             <span class="city-date-label">29 мая</span>
-            <span class="city-name-label">Екатеринбург</span>
+            <span class="city-name-label">💎 Екатеринбург</span>
           </span>
           <span class="city-cap-label">1500 чел.</span>
         </div>
@@ -639,7 +640,7 @@
         <a href="https://t.me/+QZ4mZEZY9kM0NGYy" class="btn btn-telegram" target="_blank" rel="noopener">
           <span class="icon"><i class="fab fa-telegram-plane"></i></span>
           <span class="btn-text">
-            <span class="btn-title">Чат в тг, чтобы найти с кем пойти</span>
+            <span class="btn-title">💬 Чат в тг, чтобы найти с кем пойти</span>
           </span>
           <span class="arrow"><i class="fas fa-chevron-right"></i></span>
         </a>
@@ -647,7 +648,7 @@
         <a href="https://t.me/+EbZItd5CThU0YmYy" class="btn btn-website" target="_blank" rel="noopener">
           <span class="icon"><i class="fas fa-users"></i></span>
           <span class="btn-text">
-            <span class="btn-title">Наше сообщество</span>
+            <span class="btn-title">🎉 Наше сообщество</span>
           </span>
           <span class="arrow"><i class="fas fa-chevron-right"></i></span>
         </a>
@@ -655,7 +656,7 @@
         <a href="https://t.me/chakchak_dating_bot" class="btn btn-website" target="_blank" rel="noopener">
           <span class="icon"><i class="fas fa-heart"></i></span>
           <span class="btn-text">
-            <span class="btn-title">Приложение для знакомств</span>
+            <span class="btn-title">💘 Приложение для знакомств</span>
           </span>
           <span class="arrow"><i class="fas fa-chevron-right"></i></span>
         </a>
