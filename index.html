@@ -104,17 +104,55 @@
       z-index: 2;
       max-width: 480px;
       margin: 0 auto;
-      padding: 0 16px 56px;
+      padding: 20px 16px 56px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     /* ============================================================
-       ВЕРХНИЙ ОРНАМЕНТАЛЬНЫЙ БОРДЮР
+       HERO — фото с плавным переходом в фон
     ============================================================ */
-    .top-border { width: 100%; margin-bottom: 24px; }
-    .top-border svg { width: 100%; height: auto; display: block; }
+    .hero-section {
+      position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 320px;
+    background: url(./main.JPG) center 30% / cover no-repeat;
+    margin-bottom: -154px;
+    background-position-x: 60%;
+    background-position-y: -48px;
+    zoom: 0.75;
+    }
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      bottom: 48px; left: 0; right: 0;
+      height: 90%;
+      background: linear-gradient(to bottom, transparent, var(--cream));
+    }
+
+    /* ============================================================
+       СПИСОК ГОРОДОВ
+    ============================================================ */
+    .city-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .city-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      border-radius: 8px;
+      background: var(--cream-dark);
+      border: 1px solid var(--border-s);
+    }
+    .city-info { display: flex; flex-direction: column; gap: 2px; }
+    .city-date-label { font-size: 11px; color: var(--text-muted); font-weight: 600; letter-spacing: 0.04em; }
+    .city-name-label { font-size: 15px; font-weight: 800; color: var(--text-dark); }
+    .city-cap-label { font-size: 12px; font-weight: 700; color: var(--gold); white-space: nowrap; }
 
     /* ============================================================
        АВАТАР
@@ -454,7 +492,6 @@
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    .top-border     { animation: fadeUp 0.5s ease both; }
     .avatar-wrapper { animation: fadeUp 0.5s 0.05s ease both; }
     .title          { animation: fadeUp 0.5s 0.1s  ease both; }
     .subtitle       { animation: fadeUp 0.5s 0.14s ease both; }
@@ -477,82 +514,12 @@
   <!-- Контейнер чак-чак снежинок -->
   <div id="chakchak-canvas"></div>
 
+  <!-- Hero: фото плавно переходит в фон -->
+  <div class="hero-section"></div>
+
   <div class="container">
 
-    <!-- ============================================================
-         ВЕРХНИЙ ОРНАМЕНТАЛЬНЫЙ БОРДЮР
-         Татарский борт: ромб + 8-конечная звёздочка
-    ============================================================ -->
-    <div class="top-border">
-      <svg viewBox="0 0 480 56" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="border-pat" x="0" y="0" width="48" height="56" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="4"  x2="48" y2="4"  stroke="#C4860A" stroke-width="1.2" opacity="0.7"/>
-            <line x1="0" y1="8"  x2="48" y2="8"  stroke="#7B1C2E" stroke-width="0.6" opacity="0.4"/>
-            <line x1="0" y1="48" x2="48" y2="48" stroke="#7B1C2E" stroke-width="0.6" opacity="0.4"/>
-            <line x1="0" y1="52" x2="48" y2="52" stroke="#C4860A" stroke-width="1.2" opacity="0.7"/>
-            <path d="M24,10 L42,28 L24,46 L6,28 Z" fill="none" stroke="#C4860A" stroke-width="1" opacity="0.5"/>
-            <path d="M24,17 L35,28 L24,39 L13,28 Z" fill="rgba(245,217,138,0.3)" stroke="#C4860A" stroke-width="0.7" opacity="0.6"/>
-            <path d="M24,21 L25.1,25.2 L29.1,23 L26.9,27 L31,28.6 L26.9,29 L29.1,33 L25.1,30.8 L24,35 L22.9,30.8 L18.9,33 L21.1,29 L17,28.6 L21.1,27 L18.9,23 L22.9,25.2 Z" fill="#C4860A" opacity="0.55"/>
-            <circle cx="24" cy="10" r="2"   fill="#C4860A" opacity="0.6"/>
-            <circle cx="42" cy="28" r="2"   fill="#7B1C2E" opacity="0.5"/>
-            <circle cx="24" cy="46" r="2"   fill="#C4860A" opacity="0.6"/>
-            <circle cx="6"  cy="28" r="2"   fill="#7B1C2E" opacity="0.5"/>
-            <circle cx="0"  cy="4"  r="1.5" fill="#C4860A" opacity="0.5"/>
-            <circle cx="48" cy="4"  r="1.5" fill="#C4860A" opacity="0.5"/>
-            <circle cx="0"  cy="52" r="1.5" fill="#C4860A" opacity="0.5"/>
-            <circle cx="48" cy="52" r="1.5" fill="#C4860A" opacity="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="480" height="56" fill="rgba(245,217,138,0.1)" rx="4"/>
-        <rect width="480" height="56" fill="url(#border-pat)"/>
-        <line x1="0" y1="1"  x2="480" y2="1"  stroke="#C4860A" stroke-width="2" opacity="0.6"/>
-        <line x1="0" y1="55" x2="480" y2="55" stroke="#C4860A" stroke-width="2" opacity="0.6"/>
-        <path d="M6,1 L10,5 L6,9 L2,5 Z"        fill="#7B1C2E" opacity="0.6"/>
-        <path d="M474,1 L478,5 L474,9 L470,5 Z"  fill="#7B1C2E" opacity="0.6"/>
-        <path d="M6,47 L10,51 L6,55 L2,51 Z"     fill="#7B1C2E" opacity="0.6"/>
-        <path d="M474,47 L478,51 L474,55 L470,51 Z" fill="#7B1C2E" opacity="0.6"/>
-      </svg>
-    </div>
-
-    <!-- АВАТАР -->
-    <div class="avatar-wrapper">
-      <div class="avatar-octagon">
-        <svg class="avatar-ring-svg" viewBox="0 0 124 124" xmlns="http://www.w3.org/2000/svg">
-          <path d="M62,4 L120,62 L62,120 L4,62 Z" fill="none" stroke="#C4860A" stroke-width="1.2" opacity="0.5"/>
-          <path d="M62,10 L65.6,51 L78.2,20 L71,54 L104,34 L76,64 L114,60 L77,70 L114,90 L76,76 L104,106 L71,74 L78.2,104 L65.6,73 L62,114 L58.4,73 L45.8,104 L53,74 L20,106 L48,76 L10,90 L47,70 L10,60 L48,64 L20,34 L53,54 L45.8,20 L58.4,51 Z"
-                fill="none" stroke="#C4860A" stroke-width="0.8" opacity="0.4"/>
-          <circle cx="62" cy="4"   r="3" fill="#C4860A" opacity="0.6"/>
-          <circle cx="120" cy="62" r="3" fill="#7B1C2E" opacity="0.5"/>
-          <circle cx="62" cy="120" r="3" fill="#C4860A" opacity="0.6"/>
-          <circle cx="4"  cy="62"  r="3" fill="#7B1C2E" opacity="0.5"/>
-          <circle cx="106" cy="18"  r="2" fill="#7B1C2E" opacity="0.4"/>
-          <circle cx="106" cy="106" r="2" fill="#7B1C2E" opacity="0.4"/>
-          <circle cx="18"  cy="106" r="2" fill="#7B1C2E" opacity="0.4"/>
-          <circle cx="18"  cy="18"  r="2" fill="#7B1C2E" opacity="0.4"/>
-        </svg>
-        <div class="avatar-inner">
-          <!-- 🎶 -->
-          <!-- Фото:  -->
-          <img src="ava.jpeg" alt="Чак-Чак" />
-        </div>
-      </div>
-    </div>
-
     <h1 class="title">Чак-Чак Дискотека</h1>
-    <p class="subtitle">Татаро-башкирский вайб, музыка и тусовки</p>
-    <p class="greeting">Рәхим итегез, дуслар! ✦</p>
-
-    <!-- Карточка организатора -->
-    <div class="organizer-card">
-      <span class="org-corner-tr"></span>
-      <span class="org-corner-bl"></span>
-      <div class="organizer-icon">🎤</div>
-      <div>
-        <div class="organizer-name">Булат Миндияров</div>
-        <div class="organizer-role">Организатор · Чак-Чак Дискотека</div>
-      </div>
-    </div>
 
     <!-- Разделитель -->
     <div class="divider">
@@ -588,51 +555,49 @@
         Билеты
       </div>
 
-      <p class="ticket-instruction">
-        Для покупки билета нажми на свой город<br>и выбери билет
-      </p>
-
-      <!-- Быстрые ссылки 2×2 — меняй href="#" на нужные ссылки -->
-      <div class="quick-links">
-        <a href="#" class="quick-btn qb-ad" target="_blank" rel="noopener">
-          <i class="fas fa-bullhorn"></i> Реклама
-        </a>
-        <a href="#" class="quick-btn qb-perf" target="_blank" rel="noopener">
-          <i class="fas fa-microphone"></i> Выступления
-        </a>
-        <a href="#" class="quick-btn qb-chat" target="_blank" rel="noopener">
-          <i class="fab fa-telegram-plane"></i> Чат
-        </a>
-        <a href="#" class="quick-btn qb-help" target="_blank" rel="noopener">
-          <i class="fas fa-question-circle"></i> Помощь
-        </a>
-      </div>
-
-      <!-- Дисклеймер -->
-      <div class="disclaimer">
-        <strong>Важно:</strong> Это лишь переходник для вашего удобства,
-        билеты покупаются через сервис <strong>Ticketscloud</strong>.
-        Возврат билетов совершается через их платформу.
-      </div>
-
-      <!-- Кнопки городов — замени href="#" на ссылки Ticketscloud -->
-      <div class="city-buttons">
-        <a href="#" class="city-btn city-ufa" target="_blank" rel="noopener">
-          <span class="city-icon">🏙️</span>
-          <span class="city-text">
-            <span class="city-name">Уфа: 20.03</span>
-            <span class="city-sub">Купить билет → Ticketscloud</span>
+      <div class="city-list">
+        <div class="city-row">
+          <span class="city-info">
+            <span class="city-date-label">24 апреля</span>
+            <span class="city-name-label">Пермь</span>
           </span>
-          <i class="fas fa-chevron-right city-arrow"></i>
-        </a>
-        <a href="#" class="city-btn city-sterl" target="_blank" rel="noopener">
-          <span class="city-icon">🏙️</span>
-          <span class="city-text">
-            <span class="city-name">Стерлитамак: 24.04</span>
-            <span class="city-sub">Купить билет → Ticketscloud</span>
+          <span class="city-cap-label">800 чел.</span>
+        </div>
+        <div class="city-row">
+          <span class="city-info">
+            <span class="city-date-label">30 апреля</span>
+            <span class="city-name-label">Уфа</span>
           </span>
-          <i class="fas fa-chevron-right city-arrow"></i>
-        </a>
+          <span class="city-cap-label">1500 чел.</span>
+        </div>
+        <div class="city-row">
+          <span class="city-info">
+            <span class="city-date-label">15 мая</span>
+            <span class="city-name-label">Санкт-Петербург</span>
+          </span>
+          <span class="city-cap-label">1700 чел.</span>
+        </div>
+        <div class="city-row">
+          <span class="city-info">
+            <span class="city-date-label">16 мая</span>
+            <span class="city-name-label">Москва</span>
+          </span>
+          <span class="city-cap-label">850 чел.</span>
+        </div>
+        <div class="city-row">
+          <span class="city-info">
+            <span class="city-date-label">23 мая</span>
+            <span class="city-name-label">Самара</span>
+          </span>
+          <span class="city-cap-label">700 чел.</span>
+        </div>
+        <div class="city-row">
+          <span class="city-info">
+            <span class="city-date-label">29 мая</span>
+            <span class="city-name-label">Екатеринбург</span>
+          </span>
+          <span class="city-cap-label">1500 чел.</span>
+        </div>
       </div>
     </div>
 
@@ -671,65 +636,26 @@
       </div>
 
       <div class="links">
-        <a href="https://www.instagram.com/chak.chak.disco?igsh=MWJ0ZG5lcjhkNmw4Ng==" class="btn btn-instagram" target="_blank" rel="noopener">
-          <span class="icon"><i class="fab fa-instagram"></i></span>
-          <span class="btn-text">
-            <span class="btn-title">Instagram — Чак-Чак Дискотека</span>
-            <span class="btn-sub">Фото, видео, анонсы событий</span>
-          </span>
-          <span class="arrow"><i class="fas fa-chevron-right"></i></span>
-        </a>
-
-        <a href="https://www.instagram.com/bulat.mindiyarov?igsh=MjRwbGNmazJ0dGJu" class="btn btn-instagram" target="_blank" rel="noopener">
-          <span class="icon"><i class="fab fa-instagram"></i></span>
-          <span class="btn-text">
-            <span class="btn-title">Instagram — Булат Миндияров</span>
-            <span class="btn-sub">Личный аккаунт организатора</span>
-          </span>
-          <span class="arrow"><i class="fas fa-chevron-right"></i></span>
-        </a>
-
         <a href="https://t.me/+QZ4mZEZY9kM0NGYy" class="btn btn-telegram" target="_blank" rel="noopener">
           <span class="icon"><i class="fab fa-telegram-plane"></i></span>
           <span class="btn-text">
-            <span class="btn-title">Telegram — Канал</span>
-            <span class="btn-sub">Анонсы и новости</span>
+            <span class="btn-title">Чат в тг, чтобы найти с кем пойти</span>
           </span>
           <span class="arrow"><i class="fas fa-chevron-right"></i></span>
         </a>
 
-        <a href="https://t.me/chakchak_dating_bot" class="btn btn-telegram" target="_blank" rel="noopener">
-          <span class="icon"><i class="fab fa-telegram-plane"></i></span>
+        <a href="https://t.me/+EbZItd5CThU0YmYy" class="btn btn-website" target="_blank" rel="noopener">
+          <span class="icon"><i class="fas fa-users"></i></span>
           <span class="btn-text">
-            <span class="btn-title">Telegram — Чат</span>
-            <span class="btn-sub">Живое общение, вопросы</span>
+            <span class="btn-title">Наше сообщество</span>
           </span>
           <span class="arrow"><i class="fas fa-chevron-right"></i></span>
         </a>
 
-        <!-- <a href="#" class="btn btn-tiktok" target="_blank" rel="noopener">
-          <span class="icon"><i class="fab fa-tiktok"></i></span>
+        <a href="https://t.me/chakchak_dating_bot" class="btn btn-website" target="_blank" rel="noopener">
+          <span class="icon"><i class="fas fa-heart"></i></span>
           <span class="btn-text">
-            <span class="btn-title">TikTok</span>
-            <span class="btn-sub">Короткие видео и клипы</span>
-          </span>
-          <span class="arrow"><i class="fas fa-chevron-right"></i></span>
-        </a> -->
-
-        <!-- <a href="#" class="btn btn-youtube" target="_blank" rel="noopener">
-          <span class="icon"><i class="fab fa-youtube"></i></span>
-          <span class="btn-text">
-            <span class="btn-title">YouTube</span>
-            <span class="btn-sub">Видеозаписи вечеринок</span>
-          </span>
-          <span class="arrow"><i class="fas fa-chevron-right"></i></span>
-        </a> -->
-
-        <a href="#" class="btn btn-website" target="_blank" rel="noopener">
-          <span class="icon"><i class="fas fa-calendar-alt"></i></span>
-          <span class="btn-text">
-            <span class="btn-title">Афиша мероприятий</span>
-            <span class="btn-sub">Расписание и анонсы</span>
+            <span class="btn-title">Приложение для знакомств</span>
           </span>
           <span class="arrow"><i class="fas fa-chevron-right"></i></span>
         </a>
