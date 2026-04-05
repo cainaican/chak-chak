@@ -152,7 +152,7 @@
       max-width: 480px;
       margin: 0 auto -130px;
       height: 300px;
-      background: url(https://cy771960.tw1.ru/main.JPG) 60% 20% / cover no-repeat;
+      background: url(./main.png) 60% 20% / cover no-repeat;
       border-radius: 0 0 16px 16px;
     }
 
@@ -1109,23 +1109,23 @@
        ПАРАЛЛАКС ФОНА (только desktop, при движении мыши)
        Удали если не нужен
     ============================================================ */
-    // (function () {
-    //   var tx = 0, ty = 0, cx = 0, cy = 0;
-    //   document.addEventListener('mousemove', function (e) {
-    //     tx = (e.clientX / window.innerWidth - 0.5) * 14;
-    //     ty = (e.clientY / window.innerHeight - 0.5) * 14;
-    //   });
-    //   (function tick() {
-    //     cx += (tx - cx) * 0.05;
-    //     cy += (ty - cy) * 0.05;
-    //     document.documentElement.style.setProperty('--px', cx.toFixed(1) + 'px');
-    //     document.documentElement.style.setProperty('--py', cy.toFixed(1) + 'px');
-    //     requestAnimationFrame(tick);
-    //   })();
-    //   var s = document.createElement('style');
-    //   s.textContent = 'body::before{background-position:var(--px,0) var(--py,0);}';
-    //   document.head.appendChild(s);
-    // })();
+    (function () {
+      var tx = 0, ty = 0, cx = 0, cy = 0;
+      document.addEventListener('mousemove', function (e) {
+        tx = (e.clientX / window.innerWidth - 0.5) * 14;
+        ty = (e.clientY / window.innerHeight - 0.5) * 14;
+      });
+      (function tick() {
+        cx += (tx - cx) * 0.05;
+        cy += (ty - cy) * 0.05;
+        document.documentElement.style.setProperty('--px', cx.toFixed(1) + 'px');
+        document.documentElement.style.setProperty('--py', cy.toFixed(1) + 'px');
+        requestAnimationFrame(tick);
+      })();
+      var s = document.createElement('style');
+      s.textContent = 'body::before{background-position:var(--px,0) var(--py,0);}';
+      document.head.appendChild(s);
+    })();
   </script>
 
 </body>
