@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Russo+One&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Russo+One&display=swap"
+    rel="stylesheet" />
   <style>
     @font-face {
       font-family: 'SyncopateRus';
@@ -23,26 +26,35 @@
        Меняй переменные здесь
     ============================================================ */
     :root {
-      --cream:        #111111;
-      --cream-dark:   #1A1A1A;
-      --gold:         #C4860A;
-      --gold-light:   #FFD700;
-      --gold-pale:    #E5A820;
-      --burgundy:     #C4860A;
-      --burgundy-l:   #E5A820;
-      --green:        #C4860A;
-      --green-l:      #E5A820;
-      --text-dark:    #FFD700;
-      --text-mid:     #E5A820;
-      --text-muted:   #9A7A3A;
-      --border:       rgba(196,134,10,0.35);
-      --border-s:     rgba(196,134,10,0.18);
-      --shadow:       0 2px 16px rgba(0,0,0,0.5);
-      --shadow-lg:    0 4px 28px rgba(0,0,0,0.7);
+      --cream: #111111;
+      --cream-dark: #1A1A1A;
+      --gold: #C4860A;
+      --gold-light: #FFD700;
+      --gold-pale: #E5A820;
+      --burgundy: #C4860A;
+      --burgundy-l: #E5A820;
+      --green: #C4860A;
+      --green-l: #E5A820;
+      --text-dark: #FFD700;
+      --text-mid: #E5A820;
+      --text-muted: #9A7A3A;
+      --border: rgba(196, 134, 10, 0.35);
+      --border-s: rgba(196, 134, 10, 0.18);
+      --shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 4px 28px rgba(0, 0, 0, 0.7);
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'SyncopateRus', sans-serif;
@@ -72,7 +84,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(196,134,10,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(196, 134, 10, 0.08) 0%, transparent 70%);
     }
 
     /* ============================================================
@@ -96,10 +108,23 @@
     }
 
     @keyframes ccFall {
-      0%   { transform: translateY(0) rotate(0deg);     opacity: 0;   }
-      8%   { opacity: 1; }
-      92%  { opacity: 0.7; }
-      100% { transform: translateY(110vh) rotate(520deg); opacity: 0; }
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+
+      8% {
+        opacity: 1;
+      }
+
+      92% {
+        opacity: 0.7;
+      }
+
+      100% {
+        transform: translateY(110vh) rotate(520deg);
+        opacity: 0;
+      }
     }
 
     /* ============================================================
@@ -129,10 +154,13 @@
       background: url(https://cy771960.tw1.ru/main.JPG) 60% 20% / cover no-repeat;
       border-radius: 0 0 16px 16px;
     }
+
     .hero-section::after {
       content: '';
       position: absolute;
-      bottom: 0; left: 0; right: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       height: 90%;
       background: linear-gradient(to bottom, transparent, #080808);
       border-radius: 0 0 16px 16px;
@@ -146,6 +174,7 @@
       flex-direction: column;
       gap: 8px;
     }
+
     .city-row {
       display: flex;
       align-items: center;
@@ -156,14 +185,39 @@
       border: 1px solid var(--border-s);
       text-decoration: none;
     }
-    .city-info { width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding-right: 20px;}
-    .city-name-label { font-size: 14px; font-weight: 800; color: var(--text-dark); display: block;}
-    .city-date-label { font-family: 'Nunito', sans-serif; font-size: 10px; font-weight: 800;color: var(--text-mid); font-weight: 800; letter-spacing: 0.04em; display: block;}
+
+    .city-info {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 20px;
+    }
+
+    .city-name-label {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-dark);
+      display: block;
+    }
+
+    .city-date-label {
+      font-family: 'Nunito', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--text-mid);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      display: block;
+    }
 
     /* ============================================================
        АВАТАР
     ============================================================ */
-    .avatar-wrapper { margin-bottom: 18px; }  
+    .avatar-wrapper {
+      margin-bottom: 18px;
+    }
 
     .avatar-octagon {
       width: 124px;
@@ -181,7 +235,12 @@
       height: 100%;
       animation: rotateSlow 14s linear infinite;
     }
-    @keyframes rotateSlow { to { transform: rotate(360deg); } }
+
+    @keyframes rotateSlow {
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
     .avatar-inner {
       width: 96px;
@@ -189,7 +248,7 @@
       border-radius: 50%;
       background: linear-gradient(145deg, #1A1A1A, #0F0F0F);
       border: 2.5px solid var(--gold);
-      box-shadow: 0 0 0 4px rgba(196,134,10,0.2), 0 0 20px rgba(196,134,10,0.15), var(--shadow-lg);
+      box-shadow: 0 0 0 4px rgba(196, 134, 10, 0.2), 0 0 20px rgba(196, 134, 10, 0.15), var(--shadow-lg);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -198,7 +257,13 @@
       position: relative;
       z-index: 1;
     }
-    .avatar-inner img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+
+    .avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
 
     /* ============================================================
        ЗАГОЛОВКИ
@@ -255,20 +320,83 @@
       position: relative;
       margin-bottom: 6px;
     }
-    .organizer-card::before { content:''; position:absolute; top:-1px; left:-1px; width:14px; height:14px; border-top:2.5px solid var(--gold); border-left:2.5px solid var(--gold); }
-    .organizer-card::after  { content:''; position:absolute; bottom:-1px; right:-1px; width:14px; height:14px; border-bottom:2.5px solid var(--gold); border-right:2.5px solid var(--gold); }
-    .org-corner-tr { position:absolute; top:-1px; right:-1px; width:14px; height:14px; border-top:2.5px solid var(--gold); border-right:2.5px solid var(--gold); }
-    .org-corner-bl { position:absolute; bottom:-1px; left:-1px; width:14px; height:14px; border-bottom:2.5px solid var(--gold); border-left:2.5px solid var(--gold); }
 
-    .organizer-icon { font-size: 28px; flex-shrink: 0; }
-    .organizer-name { font-size: 15px; font-weight: 800; background: linear-gradient(135deg, #FFD700, #C4860A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .organizer-role { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .organizer-card::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 14px;
+      height: 14px;
+      border-top: 2.5px solid var(--gold);
+      border-left: 2.5px solid var(--gold);
+    }
+
+    .organizer-card::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 14px;
+      height: 14px;
+      border-bottom: 2.5px solid var(--gold);
+      border-right: 2.5px solid var(--gold);
+    }
+
+    .org-corner-tr {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      width: 14px;
+      height: 14px;
+      border-top: 2.5px solid var(--gold);
+      border-right: 2.5px solid var(--gold);
+    }
+
+    .org-corner-bl {
+      position: absolute;
+      bottom: -1px;
+      left: -1px;
+      width: 14px;
+      height: 14px;
+      border-bottom: 2.5px solid var(--gold);
+      border-left: 2.5px solid var(--gold);
+    }
+
+    .organizer-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .organizer-name {
+      font-size: 15px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFD700, #C4860A);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .organizer-role {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
 
     /* ============================================================
        ОРНАМЕНТАЛЬНЫЙ РАЗДЕЛИТЕЛЬ
     ============================================================ */
-    .divider { width: 100%; max-width: 380px; margin: 18px 0 20px; }
-    .divider svg { width: 100%; height: auto; display: block; }
+    .divider {
+      width: 100%;
+      max-width: 380px;
+      margin: 18px 0 20px;
+    }
+
+    .divider svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
     /* ============================================================
        СЕКЦИЯ
@@ -297,14 +425,21 @@
       background-clip: text;
       margin-bottom: 14px;
     }
+
     .section-title .icon-badge {
-      width: 28px; height: 28px;
+      width: 28px;
+      height: 28px;
       background: linear-gradient(135deg, #C4860A, #E5A820);
       border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      color: #080808; font-size: 13px; flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #080808;
+      font-size: 13px;
+      flex-shrink: 0;
       -webkit-text-fill-color: #080808;
     }
+
     .section-title::after {
       content: '';
       flex: 1;
@@ -348,13 +483,39 @@
       transition: transform 0.18s, box-shadow 0.18s;
       border: 1px solid transparent;
     }
-    .quick-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(90,40,0,0.12); }
-    .quick-btn i { font-size: 12px; }
 
-    .qb-ad   { background: rgba(196,134,10,0.12); border-color: rgba(196,134,10,0.35); color: #FFD700; }
-    .qb-perf { background: rgba(196,134,10,0.08); border-color: rgba(196,134,10,0.25); color: #E5A820; }
-    .qb-chat { background: rgba(0,136,204,0.08);  border-color: rgba(0,136,204,0.25);  color: #4DB8FF; }
-    .qb-help { background: rgba(196,134,10,0.08); border-color: rgba(196,134,10,0.22); color: #C4860A; }
+    .quick-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(90, 40, 0, 0.12);
+    }
+
+    .quick-btn i {
+      font-size: 12px;
+    }
+
+    .qb-ad {
+      background: rgba(196, 134, 10, 0.12);
+      border-color: rgba(196, 134, 10, 0.35);
+      color: #FFD700;
+    }
+
+    .qb-perf {
+      background: rgba(196, 134, 10, 0.08);
+      border-color: rgba(196, 134, 10, 0.25);
+      color: #E5A820;
+    }
+
+    .qb-chat {
+      background: rgba(0, 136, 204, 0.08);
+      border-color: rgba(0, 136, 204, 0.25);
+      color: #4DB8FF;
+    }
+
+    .qb-help {
+      background: rgba(196, 134, 10, 0.08);
+      border-color: rgba(196, 134, 10, 0.22);
+      color: #C4860A;
+    }
 
     /* Дисклеймер */
     .disclaimer {
@@ -367,7 +528,10 @@
       line-height: 1.6;
       margin-bottom: 16px;
     }
-    .disclaimer strong { color: var(--text-dark); }
+
+    .disclaimer strong {
+      color: var(--text-dark);
+    }
 
     /* Кнопки городов */
     .city-buttons {
@@ -391,31 +555,77 @@
       position: relative;
       overflow: hidden;
     }
+
     .city-btn::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(120deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
     }
-    .city-btn:hover { transform: translateY(-2px); }
+
+    .city-btn:hover {
+      transform: translateY(-2px);
+    }
 
     .city-btn .city-icon {
-      width: 40px; height: 40px;
-      background: rgba(255,255,255,0.2);
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
       border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
     }
-    .city-btn .city-text { flex: 1; }
-    .city-btn .city-name { display: block; font-size: 15px; }
-    .city-btn .city-sub  { display: block; font-size: 11px; opacity: 0.75; font-weight: 400; margin-top: 1px; }
-    .city-btn .city-arrow { font-size: 13px; opacity: 0.7; transition: transform 0.2s; }
-    .city-btn:hover .city-arrow { transform: translateX(4px); opacity: 1; }
 
-    .city-ufa   { background: linear-gradient(135deg, #1A1200, #2A1E00); box-shadow: 0 4px 18px rgba(196,134,10,0.25); border: 1px solid rgba(196,134,10,0.4); }
-    .city-ufa:hover   { box-shadow: 0 6px 24px rgba(196,134,10,0.4); }
-    .city-sterl { background: linear-gradient(135deg, #0F1A00, #1A2800); box-shadow: 0 4px 18px rgba(100,150,10,0.2); border: 1px solid rgba(196,134,10,0.3); }
-    .city-sterl:hover { box-shadow: 0 6px 24px rgba(196,134,10,0.35); }
+    .city-btn .city-text {
+      flex: 1;
+    }
+
+    .city-btn .city-name {
+      display: block;
+      font-size: 15px;
+    }
+
+    .city-btn .city-sub {
+      display: block;
+      font-size: 11px;
+      opacity: 0.75;
+      font-weight: 400;
+      margin-top: 1px;
+    }
+
+    .city-btn .city-arrow {
+      font-size: 13px;
+      opacity: 0.7;
+      transition: transform 0.2s;
+    }
+
+    .city-btn:hover .city-arrow {
+      transform: translateX(4px);
+      opacity: 1;
+    }
+
+    .city-ufa {
+      background: linear-gradient(135deg, #1A1200, #2A1E00);
+      box-shadow: 0 4px 18px rgba(196, 134, 10, 0.25);
+      border: 1px solid rgba(196, 134, 10, 0.4);
+    }
+
+    .city-ufa:hover {
+      box-shadow: 0 6px 24px rgba(196, 134, 10, 0.4);
+    }
+
+    .city-sterl {
+      background: linear-gradient(135deg, #0F1A00, #1A2800);
+      box-shadow: 0 4px 18px rgba(100, 150, 10, 0.2);
+      border: 1px solid rgba(196, 134, 10, 0.3);
+    }
+
+    .city-sterl:hover {
+      box-shadow: 0 6px 24px rgba(196, 134, 10, 0.35);
+    }
 
     /* ============================================================
        СОЦИАЛЬНЫЕ КНОПКИ
@@ -447,42 +657,109 @@
       position: relative;
       overflow: hidden;
     }
+
     .btn::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(120deg, rgba(196,134,10,0.08) 0%, transparent 60%);
+      background: linear-gradient(120deg, rgba(196, 134, 10, 0.08) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.2s;
     }
-    .btn:hover::before { opacity: 1; }
-    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: var(--border); }
-    .btn:active { transform: translateY(0); }
+
+    .btn:hover::before {
+      opacity: 1;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
 
     .btn .icon {
-      width: 38px; height: 38px;
+      width: 38px;
+      height: 38px;
       border-radius: 9px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 17px; flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     }
-    .btn .btn-text { flex: 1; }
-    .btn .btn-title { display: block; }
-    .btn .btn-sub   { display: block; font-size: 11px; font-weight: 400; color: var(--text-muted); margin-top: 1px; }
-    .btn .arrow     { font-size: 11px; color: var(--text-muted); transition: transform 0.18s; }
-    .btn:hover .arrow { transform: translateX(3px); color: var(--gold); }
 
-    .btn-instagram .icon { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; }
-    .btn-telegram  .icon { background: #0088cc; color: #fff; }
-    .btn-tiktok    .icon { background: #111;    color: #fff; font-size: 15px; }
-    .btn-youtube   .icon { background: #cc0000; color: #fff; }
-    .btn-website   .icon { background: linear-gradient(135deg, #C4860A, #E5A820); color: #080808; }
+    .btn .btn-text {
+      flex: 1;
+    }
+
+    .btn .btn-title {
+      display: block;
+    }
+
+    .btn .btn-sub {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    .btn .arrow {
+      font-size: 11px;
+      color: var(--text-muted);
+      transition: transform 0.18s;
+    }
+
+    .btn:hover .arrow {
+      transform: translateX(3px);
+      color: var(--gold);
+    }
+
+    .btn-instagram .icon {
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+    }
+
+    .btn-telegram .icon {
+      background: #0088cc;
+      color: #fff;
+    }
+
+    .btn-tiktok .icon {
+      background: #111;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .btn-youtube .icon {
+      background: #cc0000;
+      color: #fff;
+    }
+
+    .btn-website .icon {
+      background: linear-gradient(135deg, #C4860A, #E5A820);
+      color: #080808;
+    }
 
     /* ============================================================
        НИЖНИЙ БОРДЮР + ПОДВАЛ
     ============================================================ */
-    .bottom-border { width: 100%; margin-top: 24px; transform: scaleY(-1); }
-    .bottom-border svg { width: 100%; height: auto; display: block; }
+    .bottom-border {
+      width: 100%;
+      margin-top: 24px;
+      transform: scaleY(-1);
+    }
+
+    .bottom-border svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
     .footer-text {
       text-align: center;
@@ -496,37 +773,107 @@
        АДАПТИВНОСТЬ
     ============================================================ */
     @media (max-width: 400px) {
-      .btn { padding: 11px 13px; font-size: 13px; }
-      .btn .icon { width: 34px; height: 34px; }
-      .quick-links { gap: 6px; }
-      .quick-btn { font-size: 11px; padding: 8px; }
+      .btn {
+        padding: 11px 13px;
+        font-size: 13px;
+      }
+
+      .btn .icon {
+        width: 34px;
+        height: 34px;
+      }
+
+      .quick-links {
+        gap: 6px;
+      }
+
+      .quick-btn {
+        font-size: 11px;
+        padding: 8px;
+      }
     }
 
     /* ============================================================
        АНИМАЦИИ ПОЯВЛЕНИЯ
     ============================================================ */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    .avatar-wrapper { animation: fadeUp 0.5s 0.05s ease both; }
-    .title          { animation: fadeUp 0.5s 0.1s  ease both; }
-    .subtitle       { animation: fadeUp 0.5s 0.14s ease both; }
-    .greeting       { animation: fadeUp 0.5s 0.17s ease both; }
-    .organizer-card { animation: fadeUp 0.5s 0.2s  ease both; }
-    .divider        { animation: fadeUp 0.4s 0.24s ease both; }
-    .section        { animation: fadeUp 0.4s 0.28s ease both; }
-    .links .btn:nth-child(1) { animation: fadeUp 0.4s 0.34s ease both; }
-    .links .btn:nth-child(2) { animation: fadeUp 0.4s 0.38s ease both; }
-    .links .btn:nth-child(3) { animation: fadeUp 0.4s 0.42s ease both; }
-    .links .btn:nth-child(4) { animation: fadeUp 0.4s 0.46s ease both; }
-    .links .btn:nth-child(5) { animation: fadeUp 0.4s 0.50s ease both; }
-    .links .btn:nth-child(6) { animation: fadeUp 0.4s 0.54s ease both; }
-    .links .btn:nth-child(7) { animation: fadeUp 0.4s 0.58s ease both; }
-    .bottom-border  { animation: fadeUp 0.4s 0.64s ease both; }
-    .footer-text    { animation: fadeUp 0.4s 0.68s ease both; }
+
+    .avatar-wrapper {
+      animation: fadeUp 0.5s 0.05s ease both;
+    }
+
+    .title {
+      animation: fadeUp 0.5s 0.1s ease both;
+    }
+
+    .subtitle {
+      animation: fadeUp 0.5s 0.14s ease both;
+    }
+
+    .greeting {
+      animation: fadeUp 0.5s 0.17s ease both;
+    }
+
+    .organizer-card {
+      animation: fadeUp 0.5s 0.2s ease both;
+    }
+
+    .divider {
+      animation: fadeUp 0.4s 0.24s ease both;
+    }
+
+    .section {
+      animation: fadeUp 0.4s 0.28s ease both;
+    }
+
+    .links .btn:nth-child(1) {
+      animation: fadeUp 0.4s 0.34s ease both;
+    }
+
+    .links .btn:nth-child(2) {
+      animation: fadeUp 0.4s 0.38s ease both;
+    }
+
+    .links .btn:nth-child(3) {
+      animation: fadeUp 0.4s 0.42s ease both;
+    }
+
+    .links .btn:nth-child(4) {
+      animation: fadeUp 0.4s 0.46s ease both;
+    }
+
+    .links .btn:nth-child(5) {
+      animation: fadeUp 0.4s 0.50s ease both;
+    }
+
+    .links .btn:nth-child(6) {
+      animation: fadeUp 0.4s 0.54s ease both;
+    }
+
+    .links .btn:nth-child(7) {
+      animation: fadeUp 0.4s 0.58s ease both;
+    }
+
+    .bottom-border {
+      animation: fadeUp 0.4s 0.64s ease both;
+    }
+
+    .footer-text {
+      animation: fadeUp 0.4s 0.68s ease both;
+    }
   </style>
 </head>
+
 <body>
   <!-- Контейнер чак-чак снежинок -->
   <div id="chakchak-canvas"></div>
@@ -543,22 +890,22 @@
       <svg viewBox="0 0 380 20" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="dg1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#C4860A" stop-opacity="0"/>
-            <stop offset="100%" stop-color="#C4860A" stop-opacity="0.6"/>
+            <stop offset="0%" stop-color="#C4860A" stop-opacity="0" />
+            <stop offset="100%" stop-color="#C4860A" stop-opacity="0.6" />
           </linearGradient>
           <linearGradient id="dg2" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#C4860A" stop-opacity="0.6"/>
-            <stop offset="100%" stop-color="#C4860A" stop-opacity="0"/>
+            <stop offset="0%" stop-color="#C4860A" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#C4860A" stop-opacity="0" />
           </linearGradient>
         </defs>
-        <path d="M190,2 L196,10 L190,18 L184,10 Z" fill="#C4860A" opacity="0.6"/>
-        <path d="M190,5 L194,10 L190,15 L186,10 Z" fill="#7B1C2E" opacity="0.5"/>
-        <path d="M155,10 L160,5 L165,10 L160,15 Z" fill="none" stroke="#C4860A" stroke-width="1" opacity="0.4"/>
-        <path d="M215,10 L220,5 L225,10 L220,15 Z" fill="none" stroke="#C4860A" stroke-width="1" opacity="0.4"/>
-        <line x1="0"   y1="10" x2="148" y2="10" stroke="url(#dg1)" stroke-width="1"/>
-        <line x1="232" y1="10" x2="380" y2="10" stroke="url(#dg2)" stroke-width="1"/>
-        <path d="M75,10 L78,7 L81,10 L78,13Z"    fill="#C4860A" opacity="0.35"/>
-        <path d="M299,10 L302,7 L305,10 L302,13Z" fill="#C4860A" opacity="0.35"/>
+        <path d="M190,2 L196,10 L190,18 L184,10 Z" fill="#C4860A" opacity="0.6" />
+        <path d="M190,5 L194,10 L190,15 L186,10 Z" fill="#7B1C2E" opacity="0.5" />
+        <path d="M155,10 L160,5 L165,10 L160,15 Z" fill="none" stroke="#C4860A" stroke-width="1" opacity="0.4" />
+        <path d="M215,10 L220,5 L225,10 L220,15 Z" fill="none" stroke="#C4860A" stroke-width="1" opacity="0.4" />
+        <line x1="0" y1="10" x2="148" y2="10" stroke="url(#dg1)" stroke-width="1" />
+        <line x1="232" y1="10" x2="380" y2="10" stroke="url(#dg2)" stroke-width="1" />
+        <path d="M75,10 L78,7 L81,10 L78,13Z" fill="#C4860A" opacity="0.35" />
+        <path d="M299,10 L302,7 L305,10 L302,13Z" fill="#C4860A" opacity="0.35" />
       </svg>
     </div>
 
@@ -611,22 +958,22 @@
       <svg viewBox="0 0 380 20" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="dg3" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#C4860A" stop-opacity="0"/>
-            <stop offset="100%" stop-color="#C4860A" stop-opacity="0.6"/>
+            <stop offset="0%" stop-color="#C4860A" stop-opacity="0" />
+            <stop offset="100%" stop-color="#C4860A" stop-opacity="0.6" />
           </linearGradient>
           <linearGradient id="dg4" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#C4860A" stop-opacity="0.6"/>
-            <stop offset="100%" stop-color="#C4860A" stop-opacity="0"/>
+            <stop offset="0%" stop-color="#C4860A" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#C4860A" stop-opacity="0" />
           </linearGradient>
         </defs>
-        <path d="M190,2 L196,10 L190,18 L184,10 Z" fill="#C4860A" opacity="0.6"/>
-        <path d="M190,5 L194,10 L190,15 L186,10 Z" fill="#7B1C2E" opacity="0.5"/>
-        <path d="M155,10 L160,5 L165,10 L160,15 Z" fill="none" stroke="#C4860A" stroke-width="1" opacity="0.4"/>
-        <path d="M215,10 L220,5 L225,10 L220,15 Z" fill="none" stroke="#C4860A" stroke-width="1" opacity="0.4"/>
-        <line x1="0"   y1="10" x2="148" y2="10" stroke="url(#dg3)" stroke-width="1"/>
-        <line x1="232" y1="10" x2="380" y2="10" stroke="url(#dg4)" stroke-width="1"/>
-        <path d="M75,10 L78,7 L81,10 L78,13Z"    fill="#C4860A" opacity="0.35"/>
-        <path d="M299,10 L302,7 L305,10 L302,13Z" fill="#C4860A" opacity="0.35"/>
+        <path d="M190,2 L196,10 L190,18 L184,10 Z" fill="#C4860A" opacity="0.6" />
+        <path d="M190,5 L194,10 L190,15 L186,10 Z" fill="#7B1C2E" opacity="0.5" />
+        <path d="M155,10 L160,5 L165,10 L160,15 Z" fill="none" stroke="#C4860A" stroke-width="1" opacity="0.4" />
+        <path d="M215,10 L220,5 L225,10 L220,15 Z" fill="none" stroke="#C4860A" stroke-width="1" opacity="0.4" />
+        <line x1="0" y1="10" x2="148" y2="10" stroke="url(#dg3)" stroke-width="1" />
+        <line x1="232" y1="10" x2="380" y2="10" stroke="url(#dg4)" stroke-width="1" />
+        <path d="M75,10 L78,7 L81,10 L78,13Z" fill="#C4860A" opacity="0.35" />
+        <path d="M299,10 L302,7 L305,10 L302,13Z" fill="#C4860A" opacity="0.35" />
       </svg>
     </div>
 
@@ -669,36 +1016,7 @@
       </div>
     </div>
 
-    <!-- Нижний бордюр (зеркальный) -->
-    <div class="bottom-border">
-      <svg viewBox="0 0 480 56" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="border-bot" x="0" y="0" width="48" height="56" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="4"  x2="48" y2="4"  stroke="#C4860A" stroke-width="1.2" opacity="0.7"/>
-            <line x1="0" y1="8"  x2="48" y2="8"  stroke="#7B1C2E" stroke-width="0.6" opacity="0.4"/>
-            <line x1="0" y1="48" x2="48" y2="48" stroke="#7B1C2E" stroke-width="0.6" opacity="0.4"/>
-            <line x1="0" y1="52" x2="48" y2="52" stroke="#C4860A" stroke-width="1.2" opacity="0.7"/>
-            <path d="M24,10 L42,28 L24,46 L6,28 Z" fill="none" stroke="#C4860A" stroke-width="1" opacity="0.5"/>
-            <path d="M24,17 L35,28 L24,39 L13,28 Z" fill="rgba(245,217,138,0.3)" stroke="#C4860A" stroke-width="0.7" opacity="0.6"/>
-            <path d="M24,21 L25.1,25.2 L29.1,23 L26.9,27 L31,28.6 L26.9,29 L29.1,33 L25.1,30.8 L24,35 L22.9,30.8 L18.9,33 L21.1,29 L17,28.6 L21.1,27 L18.9,23 L22.9,25.2 Z" fill="#C4860A" opacity="0.55"/>
-            <circle cx="24" cy="10" r="2"   fill="#C4860A" opacity="0.6"/>
-            <circle cx="42" cy="28" r="2"   fill="#7B1C2E" opacity="0.5"/>
-            <circle cx="24" cy="46" r="2"   fill="#C4860A" opacity="0.6"/>
-            <circle cx="6"  cy="28" r="2"   fill="#7B1C2E" opacity="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="480" height="56" fill="rgba(245,217,138,0.1)" rx="4"/>
-        <rect width="480" height="56" fill="url(#border-bot)"/>
-        <line x1="0" y1="1"  x2="480" y2="1"  stroke="#C4860A" stroke-width="2" opacity="0.6"/>
-        <line x1="0" y1="55" x2="480" y2="55" stroke="#C4860A" stroke-width="2" opacity="0.6"/>
-        <path d="M6,1 L10,5 L6,9 L2,5 Z"        fill="#7B1C2E" opacity="0.6"/>
-        <path d="M474,1 L478,5 L474,9 L470,5 Z"  fill="#7B1C2E" opacity="0.6"/>
-        <path d="M6,47 L10,51 L6,55 L2,51 Z"     fill="#7B1C2E" opacity="0.6"/>
-        <path d="M474,47 L478,51 L474,55 L470,51 Z" fill="#7B1C2E" opacity="0.6"/>
-      </svg>
-    </div>
-
-    <p class="footer-text">© 2026 Чак-Чак Дискотека · Бирге Булыйк! ✦</p>
+    <p class="footer-text">© 2026 Чак-Чак Дискотека · Бергэ Без ныгырак БулдыраБыз! ✦</p>
 
   </div><!-- /container -->
 
@@ -712,38 +1030,38 @@
     ============================================================ */
     (function () {
       var PIECE_COUNT = 28;
-      var MIN_SIZE    = 7;
-      var MAX_SIZE    = 14;
-      var SPEED_MIN   = 9;
-      var SPEED_MAX   = 22;
+      var MIN_SIZE = 7;
+      var MAX_SIZE = 14;
+      var SPEED_MIN = 9;
+      var SPEED_MAX = 22;
 
-      var COLORS = ['#D4900A','#E5A820','#C47A08','#B8690A','#F0BE50','#C88A18'];
+      var COLORS = ['#D4900A', '#E5A820', '#C47A08', '#B8690A', '#F0BE50', '#C88A18'];
 
       var canvas = document.getElementById('chakchak-canvas');
 
       for (var i = 0; i < PIECE_COUNT; i++) {
-        var size    = MIN_SIZE + Math.random() * (MAX_SIZE - MIN_SIZE);
-        var left    = Math.random() * 100;
-        var delay   = Math.random() * 18;
-        var dur     = SPEED_MIN + Math.random() * (SPEED_MAX - SPEED_MIN);
-        var color   = COLORS[Math.floor(Math.random() * COLORS.length)];
-        var rot     = Math.random() * 60 - 30;
-        var aspect  = 0.55 + Math.random() * 0.35;
+        var size = MIN_SIZE + Math.random() * (MAX_SIZE - MIN_SIZE);
+        var left = Math.random() * 100;
+        var delay = Math.random() * 18;
+        var dur = SPEED_MIN + Math.random() * (SPEED_MAX - SPEED_MIN);
+        var color = COLORS[Math.floor(Math.random() * COLORS.length)];
+        var rot = Math.random() * 60 - 30;
+        var aspect = 0.55 + Math.random() * 0.35;
         var opacity = 0.45 + Math.random() * 0.4;
 
         var el = document.createElement('div');
         el.className = 'cc-piece';
 
         el.style.cssText = [
-          'left:'             + left + '%',
-          'width:'            + size + 'px',
-          'height:'           + (size * aspect).toFixed(1) + 'px',
-          'background:'       + color,
+          'left:' + left + '%',
+          'width:' + size + 'px',
+          'height:' + (size * aspect).toFixed(1) + 'px',
+          'background:' + color,
           'border-radius:3px 2px 4px 2px',
-          'opacity:'          + opacity,
+          'opacity:' + opacity,
           'transform:rotate(' + rot + 'deg)',
-          'animation-duration:'  + dur + 's',
-          'animation-delay:'     + delay + 's',
+          'animation-duration:' + dur + 's',
+          'animation-delay:' + delay + 's',
           'box-shadow:0 1px 3px rgba(0,0,0,0.12)',
         ].join(';');
 
@@ -758,7 +1076,7 @@
     (function () {
       var tx = 0, ty = 0, cx = 0, cy = 0;
       document.addEventListener('mousemove', function (e) {
-        tx = (e.clientX / window.innerWidth  - 0.5) * 14;
+        tx = (e.clientX / window.innerWidth - 0.5) * 14;
         ty = (e.clientY / window.innerHeight - 0.5) * 14;
       });
       (function tick() {
@@ -775,4 +1093,5 @@
   </script>
 
 </body>
+
 </html>
