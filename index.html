@@ -19,26 +19,26 @@
     }
 
     /* ============================================================
-       ПАЛИТРА — светлая, тёплая, татаро-башкирская
+       ПАЛИТРА — тёмная, космическая, золотой акцент
        Меняй переменные здесь
     ============================================================ */
     :root {
-      --cream:        #FBF3E2;
-      --cream-dark:   #F2E4C8;
+      --cream:        #111111;
+      --cream-dark:   #1A1A1A;
       --gold:         #C4860A;
-      --gold-light:   #E5A820;
-      --gold-pale:    #F5D98A;
-      --burgundy:     #7B1C2E;
-      --burgundy-l:   #9B2335;
-      --green:        #1A4D2E;
-      --green-l:      #2D6E42;
-      --text-dark:    #2A1408;
-      --text-mid:     #5C3820;
-      --text-muted:   #9A7A5A;
-      --border:       rgba(196,134,10,0.28);
-      --border-s:     rgba(196,134,10,0.15);
-      --shadow:       0 2px 16px rgba(90,40,0,0.1);
-      --shadow-lg:    0 4px 28px rgba(90,40,0,0.16);
+      --gold-light:   #FFD700;
+      --gold-pale:    #E5A820;
+      --burgundy:     #C4860A;
+      --burgundy-l:   #E5A820;
+      --green:        #C4860A;
+      --green-l:      #E5A820;
+      --text-dark:    #FFD700;
+      --text-mid:     #E5A820;
+      --text-muted:   #9A7A3A;
+      --border:       rgba(196,134,10,0.35);
+      --border-s:     rgba(196,134,10,0.18);
+      --shadow:       0 2px 16px rgba(0,0,0,0.5);
+      --shadow-lg:    0 4px 28px rgba(0,0,0,0.7);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -46,7 +46,7 @@
 
     body {
       font-family: 'SyncopateRus', sans-serif;
-      background-color: var(--cream);
+      background-color: #080808;
       color: var(--text-dark);
       min-height: 100vh;
       overflow-x: hidden;
@@ -63,7 +63,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3Cpattern id='bg' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cpath d='M50,4 L96,50 L50,96 L4,50 Z' fill='none' stroke='%23C4860A' stroke-width='0.6' opacity='0.12'/%3E%3Cpath d='M50,32 L52.6,43.3 L62.7,38 L57.5,48.1 L68,51.5 L57.5,51.9 L62.7,62 L52.6,56.7 L50,68 L47.4,56.7 L37.3,62 L42.5,51.9 L32,51.5 L42.5,48.1 L37.3,38 L47.4,43.3 Z' fill='none' stroke='%23C4860A' stroke-width='0.7' opacity='0.14'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='%23C4860A' opacity='0.13'/%3E%3Ccircle cx='50' cy='50' r='1' fill='%237B1C2E' opacity='0.15'/%3E%3Ccircle cx='50' cy='4' r='1.8' fill='%23C4860A' opacity='0.14'/%3E%3Ccircle cx='96' cy='50' r='1.8' fill='%23C4860A' opacity='0.14'/%3E%3Ccircle cx='50' cy='96' r='1.8' fill='%23C4860A' opacity='0.14'/%3E%3Ccircle cx='4' cy='50' r='1.8' fill='%23C4860A' opacity='0.14'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23bg)'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3Cpattern id='bg' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cpath d='M50,4 L96,50 L50,96 L4,50 Z' fill='none' stroke='%23C4860A' stroke-width='0.6' opacity='0.18'/%3E%3Cpath d='M50,32 L52.6,43.3 L62.7,38 L57.5,48.1 L68,51.5 L57.5,51.9 L62.7,62 L52.6,56.7 L50,68 L47.4,56.7 L37.3,62 L42.5,51.9 L32,51.5 L42.5,48.1 L37.3,38 L47.4,43.3 Z' fill='none' stroke='%23C4860A' stroke-width='0.7' opacity='0.2'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='%23C4860A' opacity='0.18'/%3E%3Ccircle cx='50' cy='50' r='1' fill='%23FFD700' opacity='0.2'/%3E%3Ccircle cx='50' cy='4' r='1.8' fill='%23C4860A' opacity='0.18'/%3E%3Ccircle cx='96' cy='50' r='1.8' fill='%23C4860A' opacity='0.18'/%3E%3Ccircle cx='50' cy='96' r='1.8' fill='%23C4860A' opacity='0.18'/%3E%3Ccircle cx='4' cy='50' r='1.8' fill='%23C4860A' opacity='0.18'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23bg)'/%3E%3C/svg%3E");
     }
 
     body::after {
@@ -72,7 +72,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,217,138,0.22) 0%, transparent 70%);
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(196,134,10,0.08) 0%, transparent 70%);
     }
 
     /* ============================================================
@@ -134,7 +134,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 90%;
-      background: linear-gradient(to bottom, transparent, var(--cream));
+      background: linear-gradient(to bottom, transparent, #080808);
       border-radius: 0 0 16px 16px;
     }
 
@@ -152,7 +152,7 @@
       justify-content: space-between;
       padding: 11px 14px;
       border-radius: 8px;
-      background: var(--cream-dark);
+      background: #1A1A1A;
       border: 1px solid var(--border-s);
     }
     .city-info { width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding-right: 20px;}
@@ -186,9 +186,9 @@
       width: 96px;
       height: 96px;
       border-radius: 50%;
-      background: linear-gradient(145deg, var(--cream-dark), var(--cream));
+      background: linear-gradient(145deg, #1A1A1A, #0F0F0F);
       border: 2.5px solid var(--gold);
-      box-shadow: 0 0 0 4px rgba(196,134,10,0.15), var(--shadow-lg);
+      box-shadow: 0 0 0 4px rgba(196,134,10,0.2), 0 0 20px rgba(196,134,10,0.15), var(--shadow-lg);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -208,7 +208,10 @@
       font-weight: 800;
       text-align: center;
       line-height: 1.1;
-      color: var(--burgundy);
+      background: linear-gradient(135deg, #FFD700 0%, #C4860A 45%, #FFA500 75%, #FFD700 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       letter-spacing: 0.02em;
       margin-bottom: 8px;
     }
@@ -226,7 +229,10 @@
       font-family: 'SyncopateRus', sans-serif;
       font-style: italic;
       font-size: 14px;
-      color: var(--gold);
+      background: linear-gradient(135deg, #FFD700, #C4860A);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       text-align: center;
       letter-spacing: 0.07em;
       margin-bottom: 18px;
@@ -237,7 +243,7 @@
     ============================================================ */
     .organizer-card {
       width: 100%;
-      background: white;
+      background: #111111;
       border: 1px solid var(--border);
       border-radius: 4px;
       padding: 13px 18px;
@@ -254,7 +260,7 @@
     .org-corner-bl { position:absolute; bottom:-1px; left:-1px; width:14px; height:14px; border-bottom:2.5px solid var(--gold); border-left:2.5px solid var(--gold); }
 
     .organizer-icon { font-size: 28px; flex-shrink: 0; }
-    .organizer-name { font-size: 15px; font-weight: 800; color: var(--text-dark); }
+    .organizer-name { font-size: 15px; font-weight: 800; background: linear-gradient(135deg, #FFD700, #C4860A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .organizer-role { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
 
     /* ============================================================
@@ -268,7 +274,7 @@
     ============================================================ */
     .section {
       width: 100%;
-      background: white;
+      background: #111111;
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 20px 18px;
@@ -284,15 +290,19 @@
       font-weight: 900;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--burgundy);
+      background: linear-gradient(135deg, #FFD700, #C4860A);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       margin-bottom: 14px;
     }
     .section-title .icon-badge {
       width: 28px; height: 28px;
-      background: var(--burgundy);
+      background: linear-gradient(135deg, #C4860A, #E5A820);
       border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
-      color: white; font-size: 13px; flex-shrink: 0;
+      color: #080808; font-size: 13px; flex-shrink: 0;
+      -webkit-text-fill-color: #080808;
     }
     .section-title::after {
       content: '';
@@ -340,19 +350,19 @@
     .quick-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(90,40,0,0.12); }
     .quick-btn i { font-size: 12px; }
 
-    .qb-ad   { background: rgba(196,134,10,0.1);  border-color: rgba(196,134,10,0.3);  color: #8A5C00; }
-    .qb-perf { background: rgba(123,28,46,0.08);  border-color: rgba(123,28,46,0.25);  color: var(--burgundy); }
-    .qb-chat { background: rgba(0,136,204,0.08);  border-color: rgba(0,136,204,0.25);  color: #005C8A; }
-    .qb-help { background: rgba(26,77,46,0.08);   border-color: rgba(26,77,46,0.25);   color: var(--green); }
+    .qb-ad   { background: rgba(196,134,10,0.12); border-color: rgba(196,134,10,0.35); color: #FFD700; }
+    .qb-perf { background: rgba(196,134,10,0.08); border-color: rgba(196,134,10,0.25); color: #E5A820; }
+    .qb-chat { background: rgba(0,136,204,0.08);  border-color: rgba(0,136,204,0.25);  color: #4DB8FF; }
+    .qb-help { background: rgba(196,134,10,0.08); border-color: rgba(196,134,10,0.22); color: #C4860A; }
 
     /* Дисклеймер */
     .disclaimer {
-      background: var(--cream-dark);
+      background: #1A1A1A;
       border-left: 3px solid var(--gold);
       border-radius: 0 8px 8px 0;
       padding: 10px 12px;
       font-size: 11.5px;
-      color: var(--text-mid);
+      color: var(--text-muted);
       line-height: 1.6;
       margin-bottom: 16px;
     }
@@ -401,10 +411,10 @@
     .city-btn .city-arrow { font-size: 13px; opacity: 0.7; transition: transform 0.2s; }
     .city-btn:hover .city-arrow { transform: translateX(4px); opacity: 1; }
 
-    .city-ufa   { background: linear-gradient(135deg, #7B1C2E, #9B2335); box-shadow: 0 4px 18px rgba(123,28,46,0.3); }
-    .city-ufa:hover   { box-shadow: 0 6px 24px rgba(123,28,46,0.45); }
-    .city-sterl { background: linear-gradient(135deg, #1A4D2E, #2D6E42); box-shadow: 0 4px 18px rgba(26,77,46,0.3); }
-    .city-sterl:hover { box-shadow: 0 6px 24px rgba(26,77,46,0.45); }
+    .city-ufa   { background: linear-gradient(135deg, #1A1200, #2A1E00); box-shadow: 0 4px 18px rgba(196,134,10,0.25); border: 1px solid rgba(196,134,10,0.4); }
+    .city-ufa:hover   { box-shadow: 0 6px 24px rgba(196,134,10,0.4); }
+    .city-sterl { background: linear-gradient(135deg, #0F1A00, #1A2800); box-shadow: 0 4px 18px rgba(100,150,10,0.2); border: 1px solid rgba(196,134,10,0.3); }
+    .city-sterl:hover { box-shadow: 0 6px 24px rgba(196,134,10,0.35); }
 
     /* ============================================================
        СОЦИАЛЬНЫЕ КНОПКИ
@@ -428,7 +438,7 @@
       font-size: 14px;
       font-weight: 700;
       color: var(--text-dark);
-      background: white;
+      background: #111111;
       border: 1px solid var(--border-s);
       box-shadow: var(--shadow);
       cursor: pointer;
@@ -440,7 +450,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(120deg, rgba(255,255,255,0.5) 0%, transparent 60%);
+      background: linear-gradient(120deg, rgba(196,134,10,0.08) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.2s;
     }
@@ -465,7 +475,7 @@
     .btn-telegram  .icon { background: #0088cc; color: #fff; }
     .btn-tiktok    .icon { background: #111;    color: #fff; font-size: 15px; }
     .btn-youtube   .icon { background: #cc0000; color: #fff; }
-    .btn-website   .icon { background: var(--burgundy); color: #fff; }
+    .btn-website   .icon { background: linear-gradient(135deg, #C4860A, #E5A820); color: #080808; }
 
     /* ============================================================
        НИЖНИЙ БОРДЮР + ПОДВАЛ
@@ -562,42 +572,36 @@
       </div>
 
       <div class="city-list">
-        <div class="city-row">
+        <a href="https://chakchakdisco59.ticketscloud.org" class="city-row">
           <span class="city-info">
             <span class="city-name-label">🏔️ &nbsp Пермь - 24.04</span>
-            <!-- <span class="city-date-label">24.04</span> -->
           </span>
-        </div>
-        <div class="city-row">
+        </a>
+        <a href="https://chakchakdisco11.ticketscloud.org/" class="city-row">
           <span class="city-info">
             <span class="city-name-label">🌙 &nbsp Уфа - 30.04</span>
-            <!-- <span class="city-date-label">30.04</span> -->
           </span>
-        </div>
-        <div class="city-row">
+        </a>
+        <a href="https://chakchakdisco52.ticketscloud.org" class="city-row">
           <span class="city-info">
             <span class="city-name-label">🌊 &nbsp Санкт-Петербург - 15.05</span>
-            <!-- <span class="city-date-label">15.05</span> -->
           </span>
-        </div>
-        <div class="city-row">
+        </a>
+        <a href="https://chakchakdisco77.ticketscloud.org" class="city-row">
           <span class="city-info">
             <span class="city-name-label">🔥 &nbsp Москва - 16.05</span>
-            <!-- <span class="city-date-label">16.05</span> -->
           </span>
-        </div>
-        <div class="city-row">
+        </a>
+        <a href="https://chakchakdisco11.ticketscloud.org" class="city-row">
           <span class="city-info">
             <span class="city-name-label">☀️ &nbsp Самара - 23.05</span>
-            <!-- <span class="city-date-label">23.05</span> -->
           </span>
-        </div>
-        <div class="city-row">
+        </a>
+        <a href="https://chakchakdisco96.ticketscloud.org" class="city-row">
           <span class="city-info">
             <span class="city-name-label">💎 &nbsp Екатеринбург - 30.05</span>
-            <!-- <span class="city-date-label">30.05</span> -->
           </span>
-        </div>
+        </a>
       </div>
     </div>
 
